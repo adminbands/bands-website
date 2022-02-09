@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/de4afd38ea.js" crossorigin="anonymous"></script>
     <title>Bellezza bands</title>
 </head>
 <body>
@@ -24,8 +25,8 @@
         </ul>
     </div>
     <div id="slider">
-      <a href="#" class="control_next">>></a>
-      <a href="#" class="control_prev"><<</a>
+      <a href="#" class="control_next"><i class="fas fa-arrow-right"></i></a>
+      <a href="#" class="control_prev"><i class="fas fa-arrow-left"></i></a>
       <ul>
         <li><img src="./pic/108.png" alt="first image"></li>
         <li ><img src="./pic/122.png" alt="second image"></li>
@@ -99,6 +100,12 @@
   overflow: hidden;
   margin: 20px auto 0 auto;
   border-radius: 4px;
+}
+#slider a{
+  opacity: 0.1;
+}
+#slider a:hover{
+  opacity: 1;
 }
 
 #slider ul {
