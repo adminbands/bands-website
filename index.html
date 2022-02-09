@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellezza bands</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <a href="index.html"><img id="logo-pic" src="./pic/logo.png" alt="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li id="link1">
+                <a href="gallery.html">Gallery</a>
+            </li>
+            <li id="link2">
+                <a href="contact-page.html">Contact Us</a>
+            </li>
+            <li id="link3">
+                <a href="about.html">About Us</a>
+            </li>
+        </ul>
+    </div>
+    <div id="slider">
+      <a href="#" class="control_next">>></a>
+      <a href="#" class="control_prev"><<</a>
+      <ul>
+        <li><img src="./pic/108.png" alt="first image"></li>
+        <li ><img src="./pic/122.png" alt="second image"></li>
+        <li><img src="./pic/127.png" alt="third image"></li>
+        <li style="background: #aaa;">SLIDE 4</li>
+      </ul>  
+    </div>
+    
+    <div class="slider_option">
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox">Autoplay Slider</label>
+    </div> 
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+ :root {
+	 --d: 700ms;
+	 --e: cubic-bezier(0.19, 1, 0.22, 1);
+	 --font-sans: 'Rubik', sans-serif;
+	 --font-serif: 'Cardo', serif;
+}
+ * {
+	 box-sizing: border-box;
+}
+ html, body {
+	 height: 100%;
+}
+ body{
+     background: linear-gradient(180deg, transparent, rgba(1, 22, 31, 0.87)),
+     linear-gradient(0deg, transparent, rgba(1, 22, 31, 0.87));
+}
+ .nav-bar{
+     width: 100%;
+     height: 120px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     color: #fff;
+}
+ #logo-pic{
+     height: 140px;
+     color: #fff;
+ }
+ .nav-links{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+ .nav-links li{
+     list-style: none;
+}
+ .nav-links a{
+     padding: 15px 30px;
+     border-radius: 25px;
+     text-decoration: none;
+     color: #fff;
+}
+ a:active,
+ a:hover {
+     outline: 0;
+     background: rgba(255, 255, 255, 0.226);
+}
+ .logo a:active,
+ .logo a:hover{
+     background: rgba(255, 255, 255, 0);
+}
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 500px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+img{
+  width: 300px;
+  height: 500px;
+}
+</style>
+<script src="js/jquery.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+
+$('#checkbox').change(function(){
+  setInterval(function () {
+      moveRight();
+  }, 3000);
+});
+
+  var slideCount = $('#slider ul li').length;
+  var slideWidth = $('#slider ul li').width();
+  var slideHeight = $('#slider ul li').height();
+  var sliderUlWidth = slideCount * slideWidth;
+  
+  $('#slider').css({ width: slideWidth, height: slideHeight });
+  
+  $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+  
+  $('#slider ul li:last-child').prependTo('#slider ul');
+
+  function moveLeft() {
+      $('#slider ul').animate({
+          left: + slideWidth
+      }, 200, function () {
+          $('#slider ul li:last-child').prependTo('#slider ul');
+          $('#slider ul').css('left', '');
+      });
+  };
+
+  function moveRight() {
+      $('#slider ul').animate({
+          left: - slideWidth
+      }, 200, function () {
+          $('#slider ul li:first-child').appendTo('#slider ul');
+          $('#slider ul').css('left', '');
+      });
+  };
+
+  $('a.control_prev').click(function () {
+      moveLeft();
+  });
+
+  $('a.control_next').click(function () {
+      moveRight();
+  });
+
+});
+</script>
+</html>
