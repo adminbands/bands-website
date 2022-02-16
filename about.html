@@ -26,61 +26,64 @@
     </div>
 </body>
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
- :root {
-	 --d: 700ms;
-	 --e: cubic-bezier(0.19, 1, 0.22, 1);
-	 --font-sans: 'Rubik', sans-serif;
-	 --font-serif: 'Cardo', serif;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+:root {
+	--d: 700ms;
+	--e: cubic-bezier(0.19, 1, 0.22, 1);
+	--font-sans: 'Rubik', sans-serif;
+	--font-serif: 'Cardo', serif;
 }
- * {
-	 box-sizing: border-box;
+* {
+    margin: 0px;
+    padding: 0px;
+	box-sizing: border-box;
 }
- html, body {
-	 height: 100%;
+html, body {
+	height: 100%;
+    overflow: hidden;
 }
- body{
-   background-image: url(pic/grass.jpg);
-   background-size: 100%;
-     /* background: linear-gradient(180deg, transparent, rgba(1, 22, 31, 0.87)),
-     linear-gradient(0deg, transparent, rgba(1, 22, 31, 0.87)); */
+body{
+    background-image: url(pic/grass.jpg);
+    background-size: 100%;
+    /* background: linear-gradient(180deg, transparent, rgba(1, 22, 31, 0.87)),
+    linear-gradient(0deg, transparent, rgba(1, 22, 31, 0.87)); */
 }
- .nav-bar{
-     font-family: 'Poppins', sans-serif;
-     width: 100%;
-     height: 120px;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     color: #fff;
+.nav-bar{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
 }
- #logo-pic{
-     height: 140px;
-     color: #fff;
- }
- .nav-links{
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
+#logo-pic{
+    height: 140px;
+    color: #fff;
 }
- .nav-links li{
-     list-style: none;
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
- .nav-links a{
-     padding: 15px 30px;
-     border-radius: 25px;
-     text-decoration: none;
-     color: #fff;
+.nav-links li{
+    list-style: none;
 }
- a:active,
- a:hover {
-     outline: 0;
-     background: rgba(255, 255, 255, 0.226);
+.nav-links a{
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
 }
- .logo a:active,
- .logo a:hover{
-     background: rgba(255, 255, 255, 0);
+a:active,
+a:hover {
+    outline: 0;
+    background: rgba(255, 255, 255, 0.226);
+}
+.logo a:active,
+.logo a:hover{
+    background: rgba(255, 255, 255, 0);
 }
 </style>
 </html>
