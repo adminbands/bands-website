@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="pic/favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/de4afd38ea.js" crossorigin="anonymous"></script>
-    <title>Bellezza bands</title>
+    <title>Bellezza Bands</title>
 </head>
 <body>
     <div class="nav-bar">
@@ -25,212 +24,174 @@
             </li>
         </ul>
     </div>
-    <div id="slider">
-      <a href="#" class="control_next"><i class="fas fa-arrow-right"></i></a>
-      <a href="#" class="control_prev"><i class="fas fa-arrow-left"></i></a>
-      <ul>
-        <li><img src="./pic/108.png" alt="first image"></li>
-        <li ><img src="./pic/122.png" alt="second image"></li>
-        <li><img src="./pic/127.png" alt="third image"></li>
-        <li><img src="./pic/119.png" alt="fourth image"></li>
-      </ul>  
-    </div>
-    
-    <div class="slider_option">
-      <input type="checkbox" id="checkbox">
-      <label for="checkbox">Autoplay Slider</label>
-    </div> 
+    <section>
+        <div class="box">
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+            <div class="container">
+            </div>
+        </div>
+    </section>
 </body>
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
- :root {
-	 --d: 700ms;
-	 --e: cubic-bezier(0.19, 1, 0.22, 1);
-	 --font-sans: 'Rubik', sans-serif;
-	 --font-serif: 'Cardo', serif;
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+:root {
+	--d: 700ms;
+	--e: cubic-bezier(0.19, 1, 0.22, 1);
+	--font-sans: 'Rubik', sans-serif;
+	--font-serif: 'Cardo', serif;
 }
- * {
+* {
     margin: 0px;
     padding: 0px;
-	  box-sizing: border-box;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
- html, body {
+html, body {
 	height: 100%;
-  /* overflow: hidden; */
+    /* overflow: hidden; */
 }
- body{
-   background-image: url(pic/grass.jpg);
-   background-size: 100%;
-     /* background: linear-gradient(180deg, transparent, rgba(1, 22, 31, 0.87)),
-     linear-gradient(0deg, transparent, rgba(1, 22, 31, 0.87)); */
+body{
+    background-image: url(pic/grass.jpg);
+    background-size: 100%;
+    /* background: linear-gradient(180deg, transparent, rgba(1, 22, 31, 0.87)),
+    linear-gradient(0deg, transparent, rgba(1, 22, 31, 0.87)); */
 }
- .nav-bar{
-     font-family: 'Poppins', sans-serif;
-     width: 100%;
-     height: 120px;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     color: #fff;
+.nav-bar{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
 }
- #logo-pic{
-     height: 120px;
-     width: 207px;
-     color: #fff;
- }
- .nav-links{
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
+#logo-pic{
+    height: 120px;
+    color: #fff;
 }
- .nav-links li{
-     list-style: none;
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
- .nav-links a{
-     padding: 15px 30px;
-     border-radius: 25px;
-     text-decoration: none;
-     color: #fff;
+.nav-links li{
+    list-style: none;
 }
- a:active,
- a:hover {
-     outline: 0;
-     background: rgba(255, 255, 255, 0.226);
+.nav-links a{
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
 }
- .logo a:active,
- .logo a:hover{
-     background: rgba(255, 255, 255, 0);
+a:active,
+a:hover {
+    outline: 0;
+    background: rgba(255, 255, 255, 0.226);
 }
-#slider {
-  position: relative;
-  overflow: hidden;
-  margin: 20px auto 0 auto;
-  border-radius: 4px;
+.logo a:active,
+.logo a:hover{
+    background: rgba(255, 255, 255, 0);
 }
-#slider a{
-  opacity: 0.1;
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(to bottom, #f1f2f9, #dff1ff); */
 }
-#slider a:hover{
-  opacity: 1;
+.box{
+    position: relative;
 }
-
-#slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 200px;
-  list-style: none;
+.box .square{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
 }
-
-#slider ul li {
-  position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 350px;
-  height: 600px;
-  /* background: #ccc; */
-  border-radius: 10px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: center;
-  line-height: 300px;
+@keyframes animate{
+    0%,100%{transform: translateY(-40px);}
+    50%{transform: translateY(40px);}
 }
-
-a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
+.box .square:nth-child(1){
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+    background-image: url(pic/108.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
-  transition: all 0.2s ease;
+.box .square:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+    background-image: url(pic/118.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-a.control_prev {
-  border-radius: 0 2px 2px 0;
+.box .square:nth-child(3){
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    background-image: url(pic/117.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px;
+.box .square:nth-child(4){
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    background-image: url(pic/101.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-.slider_option {
-  position: relative;
-  margin: 10px auto;
-  width: 160px;
-  font-size: 18px;
+.box .square:nth-child(5){
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+    background-image: url(pic/132.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-img{
-  width: 300px;
-  height: 500px;
+.container{
+    position: relative;
+    width: 800px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-image: url(pic/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 </style>
-<script src="js/jquery.js"></script>
-<script>
-    jQuery(document).ready(function ($) {
-
-$('#checkbox').change(function(){
-  setInterval(function () {
-      moveRight();
-  }, 3000);
-});
-
-  var slideCount = $('#slider ul li').length;
-  var slideWidth = $('#slider ul li').width();
-  var slideHeight = $('#slider ul li').height();
-  var sliderUlWidth = slideCount * slideWidth;
-  
-  $('#slider').css({ width: slideWidth, height: slideHeight });
-  
-  $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-  
-  $('#slider ul li:last-child').prependTo('#slider ul');
-
-  function moveLeft() {
-      $('#slider ul').animate({
-          left: + slideWidth
-      }, 200, function () {
-          $('#slider ul li:last-child').prependTo('#slider ul');
-          $('#slider ul').css('left', '');
-      });
-  };
-
-  function moveRight() {
-      $('#slider ul').animate({
-          left: - slideWidth
-      }, 200, function () {
-          $('#slider ul li:first-child').appendTo('#slider ul');
-          $('#slider ul').css('left', '');
-      });
-  };
-
-  $('a.control_prev').click(function () {
-      moveLeft();
-  });
-
-  $('a.control_next').click(function () {
-      moveRight();
-  });
-
-});
-</script>
 </html>
