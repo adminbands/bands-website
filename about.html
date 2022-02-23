@@ -27,9 +27,11 @@
     <section>
         <div class="container">
             <img src="pic/logo.png" alt="logo">
-            <h2 class="title">Bellezza Bands</h2>
-            <p class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ut accusamus perspiciatis delectus illum eum cum ipsa quis eaque, neque vel dignissimos natus? Id, quaerat ipsam. Delectus aut dicta veniam! <br>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, ducimus fuga neque consequuntur ad cumque autem voluptatibus laboriosam, dolore veniam dolorum magni totam sint accusantium incidunt quae debitis impedit consequatur.</p>
+            <div class="textbox">
+                <h2 class="title">Bellezza Bands</h2>
+                <p class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ut accusamus perspiciatis delectus illum eum cum ipsa quis eaque, neque vel dignissimos natus? Id, quaerat ipsam. Delectus aut dicta veniam! <br>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, ducimus fuga neque consequuntur ad cumque autem voluptatibus laboriosam, dolore veniam dolorum magni totam sint accusantium incidunt quae debitis impedit consequatur.</p>
+            </div>
         </div>
     </section>
 </body>
@@ -53,7 +55,7 @@ html, body {
     overflow: hidden;
 }
 body{
-    background-image: url(pic/grass.jpg);
+    background-image: url(pic/background.jpg);
     background-size: 100%;
     /* background: linear-gradient(180deg, transparent, rgba(1, 22, 31, 0.87)),
     linear-gradient(0deg, transparent, rgba(1, 22, 31, 0.87)); */
@@ -143,7 +145,8 @@ section{
     background: #fff;
 }
 .container p{
-    position: absolute;
+    position: relative;
+    max-width: 90%;
     left: 70px;
     padding-top: 50px;
     color: #fff;
